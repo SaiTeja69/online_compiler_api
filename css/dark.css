@@ -29,9 +29,9 @@ a:hover {
 .heading{
   text-align: center;
 }
-#dataField{
+.dataField{
   height:70%;
 }
-#compiler{
+.compiler{
   height:30%;
 }

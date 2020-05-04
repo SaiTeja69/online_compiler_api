@@ -1,29 +1,14 @@
-$(document).ready(function() {
-
-	$('form').on('submit', function(event) {
-
-		$.ajax({
-			data : {
-				name : $('#dataField').val(),
-			},
-			type : 'POST',
-			url : 'http://127.0.0.1:5000/compiler'
-		})
-		.done(function(data) {
-
-			if (data.error) {
-				$('#errorAlert').text(data.error).show();
-				$('#successAlert').hide();
-			}
-			else {
-				$('#successAlert').text(data.name).show();
-				$('#errorAlert').hide();
-			}
-
-		});
-
-		event.preventDefault();
-
-	});
-
+$("document").ready(function(){
+    $("#send").click(function(){
+        var message = $("#message").val();
+        $.ajax({
+            url: "http://localhost:5000/api/",
+            type: "POST",
+            contentType: "application/json",
+            data: JSON.stringify({"message": message})
+        }).done(function(data) {
+			document.getElementById('compiler').innerHTML=data['message'];
+			console.log(data);
+        });
+    });
 });
