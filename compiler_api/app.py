@@ -1,4 +1,5 @@
 from flask import Flask,request,jsonify
+import os
 app = Flask(__name__)
 
 @app.route('/')
@@ -13,8 +14,8 @@ def say_hello():
 def main_interface():
     response = request.get_json()
     x=(response['message'])
-    y=eval(x)
-    response['message']=y
+    message=x
+    print(response)
     return jsonify(response)
 
 @app.after_request
