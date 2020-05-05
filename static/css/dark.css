@@ -29,6 +29,10 @@ a:hover {
 .heading{
   text-align: center;
 }
+textarea{
+  padding-left: 10%;
+  padding-right: 10%;
+}
 .dataField{
   height:70%;
 }
