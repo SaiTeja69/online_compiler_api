@@ -1,7 +1,6 @@
 from flask import Flask,request,jsonify
-import os
 app = Flask(__name__)
-import time
+
 @app.route('/')
 def index():
   return 'Server Works!'
@@ -10,10 +9,12 @@ def index():
 def say_hello():
   return 'Hello from Server'
 
-
 @app.route('/api/', methods=["POST"])
 def main_interface():
     response = request.get_json()
+    x=(response['message'])
+    y=eval(x)
+    response['message']=y
     return jsonify(response)
 
 @app.after_request
