@@ -14,7 +14,7 @@ def main_interface():
     with open('file.py','w') as f:
       f.write(result)
       f.close()
-    os.system("python file.py > op.txt")
+    os.system("python file.py > op.txt 2>&1")
     with open('op.txt','r') as f:
       result=f.read()
       f.close()

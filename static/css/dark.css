@@ -29,12 +29,15 @@ a:hover {
 .heading{
   text-align: center;
 }
-textarea{
-  padding-left: 10%;
-  padding-right: 10%;
-}
+
 .dataField{
   height:70%;
+  background: url(http://i.imgur.com/2cOaJ.png);
+  background-attachment: local;
+  background-repeat: no-repeat;
+  padding-left: 35px;
+  padding-top: 10px;
+  border-color: #ccc;
 }
 .compiler{
   height:30%;
